@@ -1,0 +1,28 @@
+-------------------------------------------Creating database in MySQL server-----------------------------------------
+
+
+For database create:-
+	
+	CREATE DATABASE bank;
+
+For create table savaccount:-
+
+	CREATE TABLE `bank`.`savaccount` (
+	  `AccountNo` INT NOT NULL AUTO_INCREMENT,
+ 	  `Name` VARCHAR(100) NOT NULL,
+	  `DoB` VARCHAR(45) NOT NULL,
+	  `Phone` BIGINT(12) NOT NULL,
+	  `Address` VARCHAR(45) NOT NULL,
+	  `OpenBalance` BIGINT(20) NOT NULL,
+	  PRIMARY KEY (`AccountNo`),
+	  UNIQUE INDEX `AccountNo_UNIQUE` (`AccountNo` ASC) VISIBLE);
+
+For create table savamount:-
+
+	CREATE TABLE `bank`.`savamount` (
+	  `AccountNo` INT NOT NULL AUTO_INCREMENT,
+	  `Name` VARCHAR(100) NOT NULL,
+	  `Balance` BIGINT(20) NOT NULL,
+	  PRIMARY KEY (`AccountNo`),
+	  UNIQUE INDEX `AccountNo_UNIQUE` (`AccountNo` ASC) VISIBLE);
+
